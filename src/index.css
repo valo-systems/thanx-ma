@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --c-ink:        #120F0B;
+    --c-umber:      #24170F;
+    --c-earth:      #6F4328;
+    --c-gold:       #C9A44F;
+    --c-gold-soft:  #E2C879;
+    --c-bone:       #F4EEE2;
+    --c-sand:       #B9A98F;
+    --c-clay:       #9B5B3C;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--c-ink);
+    color: var(--c-bone);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+    line-height: 1.65;
+    overflow-x: hidden;
+    /* Subpixel rendering for sharper text on dark backgrounds */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--c-gold);
+    color: var(--c-ink);
+  }
+
+  /* Cormorant Garamond for all display/heading elements */
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--c-gold);
+    outline-offset: 3px;
+    border-radius: 1px;
+  }
+}
+
+@layer components {
+
+  /* ── Layout ─────────────────────────────────────────────────────────── */
+  .container-editorial {
+    @apply mx-auto w-full max-w-[1280px] px-6 sm:px-10 lg:px-14;
+  }
+
+  /* ── Typography scale ────────────────────────────────────────────────── */
+
+  /* Eyebrow — small tracked uppercase label */
+  .eyebrow {
+    @apply text-[10px] sm:text-xs font-sans font-medium uppercase tracking-editorial text-gold;
+  }
+
+  /* Display sizes — cinematic and imposing */
+  .display-1 {
+    @apply font-serif text-[3.4rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem]
+           leading-[1.01] text-ivory tracking-tight;
+  }
+
+  .display-2 {
+    @apply font-serif text-[2.6rem] sm:text-[3.4rem] md:text-[4rem]
+           leading-[1.06] text-ivory tracking-tight;
+  }
+
+  .display-3 {
+    @apply font-serif text-[2rem] sm:text-[2.6rem] md:text-[3.2rem]
+           leading-[1.1] text-ivory tracking-tight;
+  }
+
+  /* Body sizes */
+  .body-lg {
+    @apply font-sans text-base sm:text-[1.0625rem] text-ivory/75 leading-[1.75] font-light;
+  }
+
+  .body-md {
+    @apply font-sans text-sm text-ivory/65 leading-relaxed font-light;
+  }
+
+  /* Animated gold horizontal rule — used below section headers */
+  .gold-rule {
+    @apply block h-px w-14 bg-gold origin-left;
+  }
+}
+
+/* ── Zulu-inspired geometric tile pattern ─────────────────────────────────
+   Abstracted diamond + concentric ring motif. Kept extremely subtle —
+   serves as texture, never as decoration competing with the content.
+   Opacity is intentionally low; raise it only with explicit sign-off.
+   ──────────────────────────────────────────────────────────────────────── */
+.bg-pattern-subtle {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='none' stroke='%23C9A44F' stroke-opacity='0.06' stroke-width='0.5'><path d='M40 8 L72 40 L40 72 L8 40 Z'/><path d='M40 24 L56 40 L40 56 L24 40 Z'/><circle cx='40' cy='40' r='1.5' fill='%23C9A44F' fill-opacity='0.12' stroke='none'/></g></svg>");
+  background-repeat: repeat;
+}
+
+/* ── Reduced motion ──────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

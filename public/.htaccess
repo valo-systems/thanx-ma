@@ -1,0 +1,16 @@
+# Thanx Ma Productions — SPA routing rules
+# Required for React Router: ensures /books, /contact, etc. serve index.html
+# instead of returning a 404 when the browser requests a direct URL or refreshes.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve the file as-is if it exists on disk
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Everything else falls through to index.html
+  RewriteRule . /index.html [L]
+</IfModule>
