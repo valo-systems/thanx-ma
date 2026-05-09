@@ -26,11 +26,11 @@ const FeatureCard = ({ icon: Icon, title, description, index = 0 }) => {
         </div>
       )}
 
-      <h3 className="font-serif text-[1.6rem] sm:text-[1.75rem] text-ivory mb-4 leading-tight tracking-tight">
+      <h3 className="font-serif text-[1.6rem] sm:text-[1.75rem] text-ivory mb-4 leading-tight tracking-tight font-normal">
         {title}
       </h3>
 
-      <p className="body-md">{description}</p>
+      <p className="body-copy !text-sm">{description}</p>
     </motion.article>
   );
 };

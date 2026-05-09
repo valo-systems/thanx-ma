@@ -6,13 +6,9 @@ import Footer from './sections/Footer.jsx';
 
 // Home page sections
 import Hero from './sections/Hero.jsx';
-import BrandIntro from './sections/BrandIntro.jsx';
 import About from './sections/About.jsx';
-import ThanxMaMeaning from './sections/ThanxMaMeaning.jsx';
 import Heritage from './sections/Heritage.jsx';
-import Productions from './sections/Productions.jsx';
-import Speaking from './sections/Speaking.jsx';
-import OfficialLinks from './sections/OfficialLinks.jsx';
+import Services from './sections/Services.jsx';
 import Contact from './sections/Contact.jsx';
 
 // Dedicated pages
@@ -26,20 +22,23 @@ import BooksPage from './pages/BooksPage.jsx';
  * so it cannot be buried by any page stacking context.
  *
  * Routes:
- *   /        — Home (single-page scroll)
+ *   /        — Home (five-section single-page scroll)
  *   /books   — Author & Books
+ *
+ * Five-section home, customer-journey ordered:
+ *   1. Hero       — first impression, single CTA
+ *   2. About      — Musa + brand soul + Ngiyabonga callout
+ *   3. Heritage   — full-bleed cultural editorial banner
+ *   4. Services   — concrete offerings (Film & TV, Ceremonies, Speaking, Books)
+ *   5. Contact    — conversion point
  */
 const HomePage = () => (
   <>
     <main>
       <Hero />
-      <BrandIntro />
       <About />
-      <ThanxMaMeaning />
       <Heritage />
-      <Productions />
-      <Speaking />
-      <OfficialLinks />
+      <Services />
       <Contact />
     </main>
     <Footer />

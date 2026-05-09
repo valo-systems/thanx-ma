@@ -2,8 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================================
+   Thanx Ma Productions — Typography System
+   ----------------------------------------------------------------------------
+   Two families. Two jobs. Editorial serif for everything that wants to feel
+   carved-and-considered (titles, quotes, book titles). Clean sans for
+   everything that wants to disappear into reading (body, nav, forms).
+
+   Cultural identity is carried by:
+     - rhythm and spacing,
+     - the gold rule and diamond geometry,
+     - quiet uppercase isiZulu eyebrows where appropriate,
+     - the warm umber / aged-gold / ivory palette.
+
+   The fonts themselves are NEVER decorative. Cormorant + Inter only.
+   ========================================================================= */
+
 @layer base {
   :root {
+    /* ── Type tokens ─────────────────────────────────────────────────── */
+    --font-serif: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+    --font-sans:  "Inter", system-ui, sans-serif;
+
+    /* ── Colour tokens ───────────────────────────────────────────────── */
     --c-ink:        #120F0B;
     --c-umber:      #24170F;
     --c-earth:      #6F4328;
@@ -22,11 +43,10 @@
   body {
     background-color: var(--c-ink);
     color: var(--c-bone);
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--font-sans);
     font-weight: 300;
     line-height: 1.65;
     overflow-x: hidden;
-    /* Subpixel rendering for sharper text on dark backgrounds */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -36,10 +56,11 @@
     color: var(--c-ink);
   }
 
-  /* Cormorant Garamond for all display/heading elements */
-  h1, h2, h3, h4 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 500;
+  /* All headings adopt the serif family by default. Specific size + weight
+     come from the .hero-title / .page-title / .section-title classes. */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
     line-height: 1.06;
     letter-spacing: -0.015em;
   }
@@ -58,48 +79,143 @@
     @apply mx-auto w-full max-w-[1280px] px-6 sm:px-10 lg:px-14;
   }
 
-  /* ── Typography scale ────────────────────────────────────────────────── */
-
-  /* Eyebrow — small tracked uppercase label */
+  /* ── Eyebrow / small tracked label ──────────────────────────────────────
+     Used above section titles, also for ALL_CAPS isiZulu labels like
+     UKUBONGA, ISIKO, IFA, UMUZI when culturally appropriate.
+     ─────────────────────────────────────────────────────────────────── */
   .eyebrow {
-    @apply text-[10px] sm:text-xs font-sans font-medium uppercase tracking-editorial text-gold;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--c-gold);
+    line-height: 1;
   }
 
-  /* Display sizes — cinematic and imposing */
-  .display-1 {
-    @apply font-serif text-[3.4rem] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem]
-           leading-[1.01] text-ivory tracking-tight;
+  /* ── Hero title — the opening statement ─────────────────────────────────
+     Used on the home Hero only. clamp() keeps it dramatic on desktop and
+     readable on mobile without media queries.
+     ─────────────────────────────────────────────────────────────────── */
+  .hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 9vw, 8.5rem);
+    line-height: 0.92;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: var(--c-bone);
+    text-wrap: balance;
   }
 
-  .display-2 {
-    @apply font-serif text-[2.6rem] sm:text-[3.4rem] md:text-[4rem]
-           leading-[1.06] text-ivory tracking-tight;
+  /* ── Page title — for full pages like /books ──────────────────────────── */
+  .page-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.6rem, 6vw, 6rem);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: var(--c-bone);
+    text-wrap: balance;
   }
 
-  .display-3 {
-    @apply font-serif text-[2rem] sm:text-[2.6rem] md:text-[3.2rem]
-           leading-[1.1] text-ivory tracking-tight;
+  /* ── Section title — every interior section heading ─────────────────── */
+  .section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    color: var(--c-bone);
+    text-wrap: balance;
   }
 
-  /* Body sizes */
-  .body-lg {
-    @apply font-sans text-base sm:text-[1.0625rem] text-ivory/75 leading-[1.75] font-light;
+  /* ── Body copy — paragraphs, intros, lede text ──────────────────────── */
+  .body-copy {
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 1.4vw, 1.125rem);
+    line-height: 1.75;
+    font-weight: 400;
+    color: rgba(244, 238, 226, 0.78);
   }
 
-  .body-md {
-    @apply font-sans text-sm text-ivory/65 leading-relaxed font-light;
+  /* ── Nav links ─────────────────────────────────────────────────────── */
+  .nav-link {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(244, 238, 226, 0.86);
+    transition: color 200ms ease-out;
+  }
+  .nav-link:hover,
+  .nav-link[aria-current="page"] {
+    color: var(--c-gold);
   }
 
-  /* Animated gold horizontal rule — used below section headers */
+  /* ── Button label ──────────────────────────────────────────────────── */
+  .button-label {
+    font-family: var(--font-sans);
+    font-size: 0.84rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Pull quote / signature line ────────────────────────────────────────
+     Italic serif. No quotation marks. Default size suits a section pull
+     quote; override with bigger sizes for hero moments (e.g. Ngiyabonga, Ma).
+     ─────────────────────────────────────────────────────────────────── */
+  .quote-text {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+    line-height: 1.3;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: rgba(244, 238, 226, 0.85);
+  }
+
+  /* ── Reading-width helpers ──────────────────────────────────────────────
+     measure-body keeps prose at ~62 characters per line (CSS ch unit) for
+     comfortable reading. measure-hero caps the hero text at ~850px so it
+     never feels like a long signpost on huge screens.
+     ─────────────────────────────────────────────────────────────────── */
+  .measure-body { max-width: 62ch; }
+  .measure-hero { max-width: 850px; }
+
+  /* ── Animated gold horizontal rule (used below section titles) ─────── */
   .gold-rule {
     @apply block h-px w-14 bg-gold origin-left;
   }
+
+  /* ── DEPRECATED ALIASES ─────────────────────────────────────────────────
+     Old class names kept temporarily as aliases so any code that has not
+     yet been migrated still renders correctly. Prefer the canonical names
+     above. These will be removed in a future cleanup pass.
+     ─────────────────────────────────────────────────────────────────── */
+  .display-1 { @apply hero-title; }
+  .display-2 { @apply section-title; }
+  .display-3 { @apply section-title; }
+  .body-lg   { @apply body-copy; }
+  .body-md {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.65;
+    font-weight: 400;
+    color: rgba(244, 238, 226, 0.65);
+  }
+}
+
+@layer utilities {
+  /* Tailwind 3.4 ships text-balance natively at the utility layer in newer
+     versions; declaring it here ensures it works regardless of the version
+     pinned in tailwind.config.js. */
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty;  }
 }
 
 /* ── Zulu-inspired geometric tile pattern ─────────────────────────────────
-   Abstracted diamond + concentric ring motif. Kept extremely subtle —
-   serves as texture, never as decoration competing with the content.
-   Opacity is intentionally low; raise it only with explicit sign-off.
+   Abstracted diamond + concentric ring motif. Quiet by design — texture,
+   never decoration. Raise opacity only with explicit sign-off.
    ──────────────────────────────────────────────────────────────────────── */
 .bg-pattern-subtle {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='none' stroke='%23C9A44F' stroke-opacity='0.06' stroke-width='0.5'><path d='M40 8 L72 40 L40 72 L8 40 Z'/><path d='M40 24 L56 40 L40 56 L24 40 Z'/><circle cx='40' cy='40' r='1.5' fill='%23C9A44F' fill-opacity='0.12' stroke='none'/></g></svg>");

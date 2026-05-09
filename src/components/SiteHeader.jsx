@@ -23,13 +23,21 @@ import Button from './Button.jsx';
  *   The /books route uses React Router <Link> for SPA navigation.
  */
 
+/**
+ * Primary navigation — kept deliberately short. Four links + the
+ * Book Musa CTA. The Books route is the only sub-page; everything
+ * else is a hash anchor on the home single-page scroll.
+ *
+ * Removed (folded elsewhere):
+ *   Legacy      → folded into /#about as the Ngiyabonga callout
+ *   Productions → renamed and consolidated into /#services
+ *   Speaking    → consolidated into /#services as a card
+ */
 const NAV_ITEMS = [
-  { label: 'About',       href: '/#about' },
-  { label: 'Legacy',      href: '/#legacy' },
-  { label: 'Productions', href: '/#productions' },
-  { label: 'Books',       href: '/books',  isRoute: true },
-  { label: 'Speaking',    href: '/#speaking' },
-  { label: 'Contact',     href: '/#contact' },
+  { label: 'About',    href: '/#about'    },
+  { label: 'Services', href: '/#services' },
+  { label: 'Books',    href: '/books',     isRoute: true },
+  { label: 'Contact',  href: '/#contact'  },
 ];
 
 const SiteHeader = () => {
@@ -196,10 +204,19 @@ const SiteHeader = () => {
           transition-all duration-500 ease-in-out
           ${scrolled
             ? 'bg-charcoal-900/92 backdrop-blur-md border-b border-ivory/[0.06] py-3.5'
-            : 'bg-transparent py-5'}
+            : 'py-5'}
         `}
       >
-        <div className="container-editorial flex items-center justify-between">
+        {/* Dark gradient behind header — improves nav legibility on hero
+            image backgrounds. Fades out once the scrolled-state solid bg
+            takes over. */}
+        <div
+          className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ${scrolled ? 'opacity-0' : 'opacity-100'}`}
+          style={{ background: 'linear-gradient(to bottom, rgba(10,8,6,0.85) 0%, rgba(18,15,11,0.35) 70%, transparent 100%)' }}
+          aria-hidden="true"
+        />
+
+        <div className="container-editorial relative flex items-center justify-between">
 
           {/* Logo */}
           <LogoLockup size="md" />
@@ -215,9 +232,8 @@ const SiteHeader = () => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`text-[13px] tracking-wide transition-colors ${
-                    isActive ? 'text-gold' : 'text-ivory/60 hover:text-ivory'
-                  }`}
+                  aria-current={isActive ? 'page' : undefined}
+                  className="nav-link"
                 >
                   {item.label}
                 </Link>
@@ -225,7 +241,7 @@ const SiteHeader = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-[13px] text-ivory/60 hover:text-ivory transition-colors tracking-wide"
+                  className="nav-link"
                 >
                   {item.label}
                 </a>

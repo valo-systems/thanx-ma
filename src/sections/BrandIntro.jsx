@@ -22,7 +22,7 @@ const PILLARS = [
   },
   {
     title: 'Heritage',
-    body:  'Every story told here is rooted in African soil — its families, its languages, its weight and its beauty.',
+    body:  'Every story told here is rooted in African soil: its families, its languages, its weight and its beauty.',
   },
   {
     title: 'Storytelling',
@@ -55,7 +55,7 @@ const BrandIntro = () => {
             <span className="eyebrow mb-6 block">About the name</span>
 
             {/* Headline */}
-            <h2 className="display-2 mb-0">
+            <h2 className="section-title mb-0">
               A name shaped{' '}
               <br className="hidden sm:block" />
               by{' '}
@@ -71,7 +71,7 @@ const BrandIntro = () => {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="body-lg text-ivory/75 max-w-xl">
+            <p className="body-copy measure-body">
               Thanx Ma carries the spirit of honouring those who raise, guide
               and shape us. It is a storytelling house built around memory,
               dignity, family and cultural weight.

@@ -52,9 +52,9 @@ const ContactForm = ({ onSubmit }) => {
     return (
       <div className="flex flex-col items-start gap-5 py-6">
         <CheckCircle2 size={28} className="text-gold" strokeWidth={1.4} />
-        <h3 className="font-serif text-3xl text-ivory">Ngiyabonga.</h3>
-        <p className="body-md max-w-sm">
-          Your enquiry has been received. The Thanx Ma Productions team will
+        <h3 className="section-title !text-3xl !leading-tight">Ngiyabonga.</h3>
+        <p className="body-copy max-w-sm">
+          Your enquiry has been received. The Thanx Ma team will
           be in touch.
         </p>
         <Button variant="ghost" onClick={() => setStatus('idle')}>

@@ -41,7 +41,7 @@ const SectionHeader = ({
       )}
 
       <motion.h2
-        className={`display-2 ${light ? 'text-charcoal-900' : 'text-ivory'}`}
+        className={`section-title ${light ? '!text-charcoal-900' : ''}`}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
@@ -61,7 +61,7 @@ const SectionHeader = ({
 
       {lede && (
         <motion.p
-          className={`body-lg mt-8 ${light ? 'text-charcoal-900/65' : 'text-ivory/70'}`}
+          className={`body-copy mt-8 measure-body ${light ? '!text-charcoal-900/70' : ''}`}
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
