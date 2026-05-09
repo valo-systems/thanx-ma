@@ -10,6 +10,39 @@ legacy platform for African storytelling, family, culture and enterprise.
 
 ---
 
+## Site map (post-consolidation)
+
+The home is now five sections, ordered around the customer's three questions —
+*who? · what can they do for me? · how do I reach them?*
+
+| # | Section | Purpose |
+|---|---|---|
+| 1 | **Hero** | Single-CTA brand opener |
+| 2 | **About** | Musa + brand soul + Ngiyabonga callout (incorporates the previous standalone Legacy / Ukubonga section) |
+| 3 | **Heritage** | Full-bleed cultural editorial banner |
+| 4 | **Services** | Four bookable offerings: Film & TV · Ceremonies & Family Milestones · Speaking · Books |
+| 5 | **Contact** | Form + direct contact |
+
+Plus the dedicated `/books` route. Primary nav: `About · Services · Books · Contact` + `Book Musa` CTA.
+
+**What was removed in the consolidation pass** (sections folded elsewhere):
+- `BrandIntro.jsx` — its 3 pillars duplicated About's pillars
+- `ThanxMaMeaning.jsx` — folded into About as the Ngiyabonga callout
+- `OfficialLinks.jsx` — social icons moved to the Footer
+- `Speaking.jsx` — consolidated into Services as a card
+- `Productions.jsx` — replaced by `Services.jsx` (broader scope, names ceremonies as a concrete offering)
+
+These files are no longer imported. Safe to delete from your local copy:
+```
+src/sections/BrandIntro.jsx
+src/sections/ThanxMaMeaning.jsx
+src/sections/OfficialLinks.jsx
+src/sections/Speaking.jsx
+src/sections/Productions.jsx
+```
+
+---
+
 ## Quick start
 
 ```bash
@@ -47,13 +80,11 @@ thanx-ma-productions/
 │   │   └── SectionHeader.jsx
 │   └── sections/
 │       ├── Hero.jsx
-│       ├── About.jsx
-│       ├── ThanxMaMeaning.jsx
-│       ├── Productions.jsx
-│       ├── Speaking.jsx
-│       ├── OfficialLinks.jsx
+│       ├── About.jsx                  # now also carries the Ngiyabonga callout
+│       ├── Heritage.jsx               # full-bleed cultural banner
+│       ├── Services.jsx               # 4 cards: Film & TV, Ceremonies, Speaking, Books
 │       ├── Contact.jsx
-│       └── Footer.jsx
+│       └── Footer.jsx                 # also hosts the social row + Built by Valo credit
 ├── tailwind.config.js         # Palette, fonts, motion keyframes
 ├── postcss.config.js
 ├── vite.config.js
@@ -81,6 +112,26 @@ Typography:
 Motion: slow zoom on hero, fade-up on scroll, gold-line reveals under section headers, shadow lift on primary buttons. All motion respects `prefers-reduced-motion`.
 
 Pattern: a *subtle, abstracted* Zulu-inspired diamond geometry served as an inline SVG data-URI background (`bg-pattern-subtle`) and a centrepiece divider component (`PatternDivider`). The shapes are intentionally derivative of common triangular/diamond geometries rather than copies of any specific beadwork motif.
+
+---
+
+## Build credit
+
+The Footer carries a discreet `Built by Valo` link to https://valosystems.co.za, sitting on the legal line bottom-right (next to the "Independent concept" disclaimer). Hovers to gold; opens in a new tab. The same credit is mirrored on the holding page (`thanx-ma-coming-soon/index.html`) below the approval line.
+
+This is a deliberate plaque, not a banner ad — it's there because the brand may be visible on national TV, and the credit doubles as quiet brand exposure for Valo without competing with the Thanx Ma identity.
+
+---
+
+## Ceremonies as a service
+
+Surfaced from public statements about Thanx Ma's work filming family ceremonies (umembeso, weddings, naming ceremonies), the Services section now carries this as a concrete bookable offering:
+
+> **Ceremonies & Family Milestones** — A discreet film service for cultural ceremonies, family milestones and the moments that matter, captured with the same respect that shapes our television work.
+
+Tags: Umembeso · Weddings · Naming ceremonies · Family events.
+
+The card is intentionally general so it covers the breadth of cultural ceremonies without reading as a wedding-vendor brochure. Once the team confirms specific service tiers / pricing, those can be added.
 
 ---
 

@@ -75,4 +75,29 @@ export const IMAGES = {
   portraitCasual: `${ASSETS}/portraits/musa-portrait-casual.jpg`,
 };
 
+/**
+ * Brand mark / logo files.
+ *
+ * The header lockup is rendered as inline SVG inside <LogoLockup> for
+ * crispness at every size and easy theming. These PNG files are here for
+ * places that need the *exact* approved artwork:
+ *   - OG / social share covers
+ *   - print export (pitch decks, PDFs)
+ *   - hero "credit roll" moments where a richer rasterised mark is wanted
+ *
+ * Naming convention: `thanxma-{form}-{tone}.png`
+ *   form = lockup-horizontal | lockup-stacked | mark | app-icon
+ *   tone = dark | light       (which background it's intended to sit on)
+ */
+export const LOGOS = {
+  lockupHorizontalDark:  `${ASSETS}/logos/thanxma-lockup-horizontal-dark.png`,
+  lockupHorizontalLight: `${ASSETS}/logos/thanxma-lockup-horizontal-light.png`,
+  lockupStackedDark:     `${ASSETS}/logos/thanxma-lockup-stacked-dark.png`,
+  lockupStackedLight:    `${ASSETS}/logos/thanxma-lockup-stacked-light.png`,
+  markDark:              `${ASSETS}/logos/thanxma-mark-dark.png`,
+  markLight:             `${ASSETS}/logos/thanxma-mark-light.png`,
+  appIconDark:           `${ASSETS}/logos/thanxma-app-icon-dark.png`,
+  appIconLight:          `${ASSETS}/logos/thanxma-app-icon-light.png`,
+};
+
 export default IMAGES;

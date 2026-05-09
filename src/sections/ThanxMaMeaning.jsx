@@ -40,6 +40,12 @@ const ThanxMaMeaning = () => {
       <div className="container-editorial">
         <div className="max-w-3xl mx-auto text-center">
 
+          {/*
+            UKUBONGA — isiZulu for "to give thanks / gratitude". Used here
+            as a single, dignified eyebrow. The English heading immediately
+            below carries the meaning so the section remains clear to any
+            English-speaking visitor.
+          */}
           <motion.span
             className="eyebrow"
             initial={{ opacity: 0, y: 10 }}
@@ -47,11 +53,11 @@ const ThanxMaMeaning = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            The meaning of Thanx Ma
+            Ukubonga
           </motion.span>
 
           <motion.h2
-            className="display-2 mt-6"
+            className="section-title mt-6"
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -64,22 +70,22 @@ const ThanxMaMeaning = () => {
           <PatternDivider />
 
           <motion.div
-            className="space-y-6 text-[1.05rem] sm:text-xl leading-[1.8] text-ivory/75 font-sans font-light"
+            className="space-y-6 measure-body mx-auto"
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.28 }}
           >
-            <p>
-              Thanx Ma is a name carried with gratitude — a quiet tribute to
+            <p className="body-copy">
+              Thanx Ma is a name carried with gratitude, a quiet tribute to
               motherhood, to the people who shape us, and to the legacy passed
               from one generation to the next.
             </p>
-            <p>
+            <p className="body-copy">
               It is the soul of every story told here. The reason to build.
               A thank you that does not need many words.
             </p>
-            <p className="font-serif italic text-[1.75rem] sm:text-3xl text-gold-light pt-4">
+            <p className="quote-text text-gold-light pt-4 !text-[clamp(1.5rem,3vw,2rem)]">
               Ngiyabonga, Ma.
             </p>
           </motion.div>

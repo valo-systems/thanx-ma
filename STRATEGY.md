@@ -32,6 +32,16 @@ Not a celebrity site. Not a fan site. A business + legacy platform.
 
 ---
 
+## What changed in the consolidation pass
+
+After early review, the home was trimmed from nine sections to five. The principle: don't make the customer scroll through the same idea four times. The brand's gratitude / family / legacy theme was being restated in Hero, BrandIntro, About *and* a standalone "Meaning of Thanx Ma" section. Now it's stated once — woven into About as the Ngiyabonga callout — and the rest of the home is structured around the customer's three questions: *who? what can they do for me? how do I reach them?*
+
+The single biggest content change: **Productions** became **Services** with four concrete bookable offerings (Film & TV, Ceremonies & Family Milestones, Speaking, Books) instead of four abstract categories. Customers can now read the page and immediately know what to hire for. The Ceremonies card in particular surfaces a real public statement about Thanx Ma's ceremony filming work — closing a gap in what the site was actually offering.
+
+Three sections were removed entirely (BrandIntro, ThanxMaMeaning, OfficialLinks) and Speaking was consolidated into Services as a single card. Net result: ~30 % less vertical scroll on the home, no loss of substance.
+
+---
+
 ## How to further better the idea
 
 A short list of concrete moves that would strengthen this beyond the current build.

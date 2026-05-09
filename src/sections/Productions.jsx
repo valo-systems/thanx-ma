@@ -19,22 +19,22 @@ const PILLARS = [
   {
     icon:        Tv,
     title:       'Reality Television',
-    description: 'Family-centred unscripted television that opens windows into South African life — produced with cultural integrity for national audiences.',
+    description: 'Family-centred unscripted television that opens windows into South African life, produced with cultural integrity for national audiences.',
   },
   {
     icon:        BookOpen,
     title:       'Cultural Storytelling',
-    description: 'Narratives shaped by African voices and lived experience — stories that travel beyond the screen into print, classrooms and lasting conversations.',
+    description: 'Narratives shaped by African voices and lived experience: stories that travel beyond the screen into print, classrooms and lasting conversations.',
   },
   {
     icon:        Users,
     title:       'Family & Legacy',
-    description: 'Programming and projects that sit with questions of heritage and legacy — what we inherit, what we choose to pass on.',
+    description: 'Programming and projects that sit with questions of heritage and legacy: what we inherit, what we choose to pass on.',
   },
   {
     icon:        MessageCircle,
     title:       'Public Conversations',
-    description: 'A platform for the conversations South Africa is having — about culture, leadership, modernity and what it means to build something at home.',
+    description: 'A platform for the conversations South Africa is having: about culture, leadership, modernity and what it means to build something at home.',
   },
 ];
 
@@ -62,7 +62,7 @@ const Productions = () => {
               stories.
             </>
           }
-          lede="Thanx Ma Productions develops and produces work rooted in African storytelling — unscripted television, cultural programming and family-centred narratives shaped by lived experience."
+          lede="Thanx Ma develops and produces work rooted in African storytelling: unscripted television, cultural programming and family-centred narratives shaped by lived experience."
         />
 
         <div className="mt-16 grid sm:grid-cols-2 gap-5">
@@ -80,13 +80,13 @@ const Productions = () => {
         {/* Selected work */}
         <div className="mt-20 border-t border-ivory/10 pt-10">
           <p className="eyebrow text-ivory/40 mb-4">Selected work</p>
-          <p className="font-serif text-xl text-ivory/65 max-w-3xl leading-relaxed">
+          <p className="quote-text !not-italic !text-ivory/65 measure-body">
             {/*
               TODO: Replace this line with confirmed title list and approved
               key art once broadcaster clearances are in place.
             */}
             A growing slate of South African unscripted, cultural and
-            legacy-driven work — full title list available on request.
+            legacy-driven work. Full title list available on request.
           </p>
         </div>
       </div>

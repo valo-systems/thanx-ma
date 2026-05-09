@@ -112,7 +112,7 @@ const THEMES = [
   {
     icon: <Heart size={20} strokeWidth={1.4} />,
     title: 'Family & Responsibility',
-    body: 'The weight and meaning of building a family intentionally — the obligations, the love and the discipline that make it last.',
+    body: 'The weight and meaning of building a family intentionally: the obligations, the love and the discipline that make it last.',
   },
   {
     icon: <Landmark size={20} strokeWidth={1.4} />,
@@ -122,7 +122,7 @@ const THEMES = [
   {
     icon: <Briefcase size={20} strokeWidth={1.4} />,
     title: 'Business & Discipline',
-    body: 'The unglamorous, honest work of starting small, surviving failure and building something that endures — in Africa, and for Africa.',
+    body: 'The unglamorous, honest work of starting small, surviving failure and building something that endures, in Africa and for Africa.',
   },
   {
     icon: <Users size={20} strokeWidth={1.4} />,
@@ -183,9 +183,9 @@ const BookContactForm = () => {
     return (
       <div className="bg-charcoal/60 border border-gold/30 p-10 sm:p-12 flex flex-col items-start gap-5">
         <CheckCircle2 size={32} className="text-gold" strokeWidth={1.4} />
-        <h3 className="font-serif text-3xl text-ivory">Ngiyabonga.</h3>
-        <p className="body-lg max-w-md">
-          Your enquiry has been received. The Thanx Ma Productions team will be in touch shortly.
+        <h3 className="section-title !text-3xl !leading-tight">Ngiyabonga.</h3>
+        <p className="body-copy max-w-md">
+          Your enquiry has been received. The Thanx Ma team will be in touch shortly.
         </p>
         <Button variant="ghost" onClick={() => setStatus('idle')}>
           Send another enquiry
@@ -316,7 +316,7 @@ const BooksPage = () => {
               className="inline-flex items-center gap-2 text-xs text-ivory/50 hover:text-gold transition-colors uppercase tracking-editorial"
             >
               <ArrowLeft size={14} strokeWidth={1.6} />
-              Thanx Ma Productions
+              Thanx Ma
             </Link>
           </motion.div>
 
@@ -334,7 +334,7 @@ const BooksPage = () => {
 
             {/* Headline */}
             <motion.h1
-              className="display-1"
+              className="page-title"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.25 }}
@@ -347,7 +347,7 @@ const BooksPage = () => {
 
             {/* Subtext */}
             <motion.p
-              className="body-lg mt-8 max-w-2xl"
+              className="body-copy mt-8 measure-body"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -394,7 +394,7 @@ const BooksPage = () => {
                 <span className="italic text-gold-light">Mseleku</span>.
               </>
             }
-            lede="Each title is an extension of the same questions Musa explores in public life — family, culture, identity and what it takes to build something that lasts."
+            lede="Each title is an extension of the same questions Musa explores in public life: family, culture, identity and what it takes to build something that lasts."
           />
 
           {/* Internal note about verification */}
@@ -429,7 +429,7 @@ const BooksPage = () => {
                 <span className="italic text-gold-light">about</span>.
               </>
             }
-            lede="Across all his written work, four themes return — not as subject matter alone, but as lived experience given permanent form."
+            lede="Across all his written work, four themes return, not as subject matter alone, but as lived experience given permanent form."
           />
 
           <div className="mt-16 sm:mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -541,7 +541,7 @@ const BooksPage = () => {
                 </p>
                 <p className="text-sm text-ivory/50 leading-relaxed">
                   All enquiries are handled confidentially and responded to by the
-                  Thanx Ma Productions team.
+                  Thanx Ma team.
                 </p>
               </motion.div>
             </div>

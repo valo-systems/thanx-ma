@@ -1,0 +1,42 @@
+name: Build check
+
+on:
+  push:
+    branches: [main, preview]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Confirm dist output
+        run: |
+          echo "=== dist/ contents ==="
+          ls -la dist/
+          echo "=== Checking required files ==="
+          test -f dist/index.html  && echo "✓ index.html" || (echo "✗ index.html missing" && exit 1)
+          test -f dist/.htaccess   && echo "✓ .htaccess"  || (echo "✗ .htaccess missing"  && exit 1)
+          test -d dist/assets      && echo "✓ assets/"    || (echo "✗ assets/ missing"    && exit 1)
+
+      # NOTE: Auto-deploy to cPanel is intentionally disabled.
+      # To enable it, add cPanel FTP/SSH credentials as GitHub Secrets and
+      # configure an FTP or SSH deploy step below.
+      # Do NOT deploy to /home/valosyst/public_html (root domain).
+      # Target is ONLY: /home/valosyst/public_html/preview.thanxma.co.za

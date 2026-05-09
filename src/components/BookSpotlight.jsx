@@ -123,7 +123,7 @@ const BookSpotlight = () => {
               </motion.span>
 
               <motion.h2
-                className="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight text-ivory"
+                className="section-title"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
@@ -145,7 +145,7 @@ const BookSpotlight = () => {
               />
 
               <motion.p
-                className="body-lg mt-8 max-w-2xl"
+                className="body-copy mt-8 measure-body"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}

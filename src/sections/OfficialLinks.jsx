@@ -31,7 +31,7 @@ const OfficialLinks = () => {
               <span className="italic text-gold-light">Thanx Ma</span>.
             </>
           }
-          lede="This site is being built as the future verified destination for official Thanx Ma Productions links, bookings, announcements and press."
+          lede="This site is being built as the future verified destination for official Thanx Ma links, bookings, announcements and press."
         />
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -65,7 +65,7 @@ const OfficialLinks = () => {
         <div className="mt-12 flex items-start gap-3 p-5 border border-gold/20 bg-gold/[0.04] max-w-3xl">
           <ShieldCheck size={18} className="text-gold/70 shrink-0 mt-0.5" strokeWidth={1.4} />
           <p className="text-sm text-ivory/60 leading-relaxed">
-            <span className="font-medium text-ivory/80">Private concept — pending official approval.</span>{' '}
+            <span className="font-medium text-ivory/80">Private concept, pending official approval.</span>{' '}
             Social handles, contact details and brand assets shown are placeholders.
             Verified information will be added once the team has approved the site for launch.
           </p>

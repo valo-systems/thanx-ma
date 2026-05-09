@@ -31,9 +31,9 @@ const Contact = () => {
               }
             />
 
-            <p className="body-md mt-8 max-w-sm">
+            <p className="body-copy mt-8 measure-body">
               For bookings, partnerships, interviews, production enquiries and
-              press — send a message and the team will respond.
+              press. Send a message and the team will respond.
             </p>
 
             {/* Direct contact */}
@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
 
             <p className="mt-8 text-xs text-ivory/35 max-w-xs leading-relaxed">
-              All enquiries are reviewed by the Thanx Ma Productions team.
+              All enquiries are reviewed by the Thanx Ma team.
               {/* TODO: confirm contact details and response time notice */}
             </p>
           </div>

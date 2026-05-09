@@ -60,7 +60,7 @@ const Hero = () => {
 
       {/* ── Content ────────────────────────────────────────────────────── */}
       <div className="container-editorial w-full">
-        <div className="max-w-[820px]">
+        <div className="measure-hero">
 
           {/* Eyebrow */}
           <motion.div
@@ -71,12 +71,12 @@ const Hero = () => {
             className="flex items-center gap-4 mb-8"
           >
             <span className="h-px w-8 bg-gold/70" aria-hidden="true" />
-            <span className="eyebrow">Thanx Ma Productions</span>
+            <span className="eyebrow">Thanx Ma</span>
           </motion.div>
 
           {/* Headline */}
           <motion.h1
-            className="display-1"
+            className="hero-title"
             variants={VARIANTS}
             initial="hidden"
             animate="show"
@@ -89,18 +89,18 @@ const Hero = () => {
 
           {/* Subtext */}
           <motion.p
-            className="body-lg mt-8 max-w-[640px]"
+            className="body-copy mt-8 measure-body"
             variants={VARIANTS}
             initial="hidden"
             animate="show"
             transition={TRANSITION(0.65)}
           >
             Rooted in gratitude and shaped by African identity, Thanx Ma
-            Productions exists to tell stories that honour where we come from
+            exists to tell stories that honour where we come from
             and what we leave behind.
           </motion.p>
 
-          {/* CTAs ── mobile: stacked; desktop: inline row */}
+          {/* CTA — single primary action. Full width on mobile, auto on desktop. */}
           <motion.div
             variants={VARIANTS}
             initial="hidden"
@@ -108,33 +108,13 @@ const Hero = () => {
             transition={TRANSITION(0.88)}
             className="mt-12"
           >
-            {/* Primary — Book Musa (full width on mobile) */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button
-                href="#contact"
-                variant="primary"
-                className="sm:w-auto w-full justify-center py-4 sm:py-3.5 text-sm"
-              >
-                Book Musa
-              </Button>
-
-              <div className="flex gap-3">
-                <Button
-                  href="#contact"
-                  variant="ghost"
-                  className="flex-1 sm:flex-none justify-center py-4 sm:py-3.5 text-[13px]"
-                >
-                  Production Enquiries
-                </Button>
-                <Button
-                  href="#contact"
-                  variant="ghost"
-                  className="flex-1 sm:flex-none justify-center py-4 sm:py-3.5 text-[13px]"
-                >
-                  Media Enquiries
-                </Button>
-              </div>
-            </div>
+            <Button
+              href="#contact"
+              variant="primary"
+              className="sm:w-auto w-full justify-center py-4 sm:py-3.5 text-sm"
+            >
+              Book Musa
+            </Button>
           </motion.div>
 
         </div>

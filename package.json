@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0-concept",
   "type": "module",
-  "description": "Private concept site for Thanx Ma Productions — pending official approval.",
+  "description": "Private concept site for Thanx Ma Productions - pending official approval.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

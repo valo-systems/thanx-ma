@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import Button from '../components/Button.jsx';
 import EditorialPillar from '../components/EditorialPillar.jsx';
 import IMAGES from '../assets/imageManifest.js';
@@ -36,15 +35,6 @@ const PILLARS = [
     title: 'Legacy',
     body:  'A voice shaped by heritage, identity and the responsibility of carrying culture forward with dignity.',
   },
-];
-
-const ROLE_TAGS = [
-  'Author',
-  'Speaker',
-  'Producer',
-  'Entrepreneur',
-  'Storyteller',
-  'Cultural Voice',
 ];
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -115,35 +105,39 @@ const QuoteBlock = () => (
     viewport={{ once: true, margin: '-60px' }}
     transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
   >
-    <p className="font-serif italic text-xl sm:text-2xl text-ivory/80 leading-snug tracking-tight">
+    <p className="quote-text">
       A life shaped by family, culture and the responsibility of legacy.
     </p>
   </motion.blockquote>
 );
 
 /**
- * RoleTags — small descriptive identifiers. Informational, not interactive.
+ * NgiyabongaCallout — the soul-of-the-brand moment, folded into About.
+ *
+ * Replaces the previously-standalone ThanxMaMeaning section. Same words,
+ * less prominent — keeps the gratitude beat without making the home page
+ * scroll for a third time on the same idea.
+ *
+ * TODO: Wording must be reviewed and approved by the Thanx Ma team
+ * before public launch.
  */
-const RoleTags = () => (
+const NgiyabongaCallout = () => (
   <motion.div
-    className="flex flex-wrap gap-2"
-    initial={{ opacity: 0, y: 10 }}
+    className="border-l-2 border-gold/35 pl-6 py-2 max-w-xl"
+    initial={{ opacity: 0, y: 14 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: '-40px' }}
-    transition={{ duration: 0.7 }}
+    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
   >
-    {ROLE_TAGS.map((tag) => (
-      <span
-        key={tag}
-        className="
-          inline-block px-3 py-1.5
-          text-[10px] font-sans font-medium uppercase tracking-editorial
-          text-sand/60 border border-ivory/10
-        "
-      >
-        {tag}
-      </span>
-    ))}
+    <p className="eyebrow mb-3" style={{ color: 'rgba(201,164,79,0.7)' }}>Ukubonga</p>
+    <p className="font-serif text-[1.15rem] sm:text-[1.3rem] leading-[1.5] text-ivory/82">
+      Thanx Ma is a name carried with gratitude — a quiet tribute to motherhood,
+      to the people who shape us, and to the legacy passed from one generation
+      to the next.
+    </p>
+    <p className="font-serif italic text-[1.4rem] sm:text-[1.6rem] text-gold-light mt-5">
+      Ngiyabonga, Ma.
+    </p>
   </motion.div>
 );
 
@@ -221,7 +215,7 @@ const About = () => {
             >
               <span className="eyebrow block mb-5">About</span>
 
-              <h2 className="display-2 mb-0">
+              <h2 className="section-title mb-0">
                 Musa C.{' '}
                 <span className="italic text-gold-light">Mseleku</span>.
               </h2>
@@ -236,7 +230,7 @@ const About = () => {
                 style={{ transformOrigin: 'left' }}
               />
 
-              <p className="body-lg mt-8 max-w-xl">
+              <p className="body-copy mt-8 measure-body">
                 Musa C. Mseleku is a South African businessman, author and
                 public figure whose work is rooted in family, culture and
                 African enterprise. His journey reflects a deep respect for
@@ -282,8 +276,8 @@ const About = () => {
               ))}
             </div>
 
-            {/* 6 — Role tags */}
-            <RoleTags />
+            {/* 6 — Ngiyabonga callout (replaces the standalone ThanxMaMeaning section) */}
+            <NgiyabongaCallout />
 
             {/* 7 — CTA row */}
             <SectionCTA />
