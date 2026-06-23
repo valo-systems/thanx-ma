@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/valosyst/public_html/preview.thanxma.co.za
+    - export DEPLOYPATH=/home/valosyst/public_html/thanxma.co.za
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/find $DEPLOYPATH -mindepth 1 -maxdepth 1 -exec /bin/rm -rf {} +
     - /bin/cp -R dist/. $DEPLOYPATH
