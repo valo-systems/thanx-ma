@@ -5,43 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#120F0B" />
 
+    <!-- ============================================================ -->
+    <!-- FAVICONS & APP ICONS                                         -->
+    <!-- Modern browsers prefer the SVG — it stays crisp at any size. -->
+    <!-- The PNG fallback covers older browsers; the apple-touch-icon -->
+    <!-- is what iOS uses when the site is added to the home screen.  -->
+    <!-- ============================================================ -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="mask-icon" href="/favicon.svg" color="#C9A44F" />
 
-    <title>Thanx Ma Productions — Something is Coming</title>
+    <!-- ============================================================ -->
+    <!-- SEO METADATA                                                 -->
+    <!-- TODO: Confirm wording with Thanx Ma / Musa's team before     -->
+    <!-- making the site publicly indexable.                          -->
+    <!-- ============================================================ -->
+    <title>Thanx Ma Productions | Legacy, Culture & African Storytelling</title>
     <meta
       name="description"
-      content="Rooted in gratitude and shaped by African identity — Thanx Ma Productions is arriving soon."
+      content="Premium media and legacy platform for African storytelling, culture, family and production enquiries."
     />
     <meta name="author" content="Thanx Ma Productions" />
+    <meta
+      name="keywords"
+      content="Thanx Ma Productions, Musa Mseleku, African storytelling, South African media, legacy, Zulu culture, executive producer, public speaker"
+    />
+
+    <!-- Block indexing while this is a private concept. Remove when approved. -->
     <meta name="robots" content="noindex, nofollow" />
 
+    <!-- ============================================================ -->
+    <!-- OPEN GRAPH                                                   -->
+    <!-- TODO: Replace og:image with an approved 1200x630 hero image. -->
+    <!-- TODO: Confirm canonical og:url once domain routing is fixed. -->
+    <!-- ============================================================ -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Thanx Ma Productions — Something is Coming" />
+    <meta
+      property="og:title"
+      content="Thanx Ma Productions | Legacy, Culture & African Storytelling"
+    />
     <meta
       property="og:description"
-      content="Rooted in gratitude and shaped by African identity — Thanx Ma Productions is arriving soon."
+      content="Premium media and legacy platform for African storytelling, culture, family and production enquiries."
     />
     <meta property="og:url" content="https://thanxma.co.za" />
     <meta property="og:site_name" content="Thanx Ma Productions" />
     <meta property="og:locale" content="en_ZA" />
     <meta property="og:image" content="/assets/logos/thanxma-lockup-stacked-dark.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Thanx Ma Productions — Something is Coming" />
-    <meta name="twitter:description" content="Rooted in gratitude and shaped by African identity — Thanx Ma Productions is arriving soon." />
+    <meta name="twitter:title" content="Thanx Ma Productions" />
+    <meta
+      name="twitter:description"
+      content="Premium media and legacy platform for African storytelling."
+    />
     <meta name="twitter:image" content="/assets/logos/thanxma-lockup-stacked-dark.png" />
 
+    <!-- ============================================================ -->
+    <!-- FONTS                                                        -->
+    <!-- ============================================================ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/index-coming-soon-sxmtZcgY.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-coming-soon-DcbUD12a.css">
+
+    <!-- ============================================================ -->
+    <!-- JSON-LD ORGANIZATION SCHEMA                                  -->
+    <!-- ⚠ PLACEHOLDER — PRIVATE CONCEPT.                              -->
+    <!-- TODO: Replace once Thanx Ma Productions confirms             -->
+    <!--   - registered company number / CIPC details                 -->
+    <!--   - registered address                                       -->
+    <!--   - official phone, email, social handles                    -->
+    <!--   - approved logo URL                                        -->
+    <!-- ============================================================ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Thanx Ma Productions",
+        "alternateName": "Thanx Ma",
+        "url": "https://thanxma.co.za",
+        "logo": "https://thanxma.co.za/assets/logo/thanxma-logo-placeholder.svg",
+        "description": "Premium media and legacy platform for African storytelling, culture, family and production enquiries.",
+        "founder": {
+          "@type": "Person",
+          "name": "Musa C. Mseleku",
+          "jobTitle": "Founder, Executive Producer",
+          "nationality": "South African"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ZA"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Bookings & Production Enquiries",
+            "email": "hello@thanxma.co.za",
+            "availableLanguage": ["en", "zu"]
+          }
+        ],
+        "sameAs": []
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-BcDhhwSH.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DcbUD12a.css">
   </head>
   <body class="antialiased">
     <div id="root"></div>
